@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>765 RS Booking</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 55px;
+            margin-bottom: 5px;
+        }
+
+        .price {
+            color: #ff3b00;
+            font-size: 55px;
+            font-weight: bold;
+        }
+
+        h3 {
+            letter-spacing: 8px;
+        }
+
+        table {
+            margin: 30px auto;
+            border-collapse: collapse;
+            width: 550px;
+        }
+
+        th, td {
+            border: 2px solid white;
+            padding: 8px;
+        }
+
+        th {
+            color: #ff3b00;
+            font-size: 18px;
+        }
+
+        td:first-child {
+            font-weight: bold;
+            text-align: left;
+        }
+
+        input, select {
+            width: 95%;
+            padding: 7px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 25px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                TRIUMPH
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="specifications.html">SPECIFICATIONS</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li><a href="book bike.html">CONTACT</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <h3>THE ULTIMATE STREETFIGHTER</h3>
+
+    <h1>STREET<br>TRIPLE</h1>
+
+    <div class="price">765 RS</div>
+
+    <p>TO BOOK THE STREET TRIPLE ONLINE</p>
+
+    <form id="bookingForm">
+
+        <table>
+
+            <tr>
+                <th>DETAILS</th>
+                <th>ENTER YOUR INFORMATION</th>
+            </tr>
+
+            <tr>
+                <td>BIKE NAME</td>
+                <td>
+                    <input type="text" id="bikeName"
+                           placeholder="Enter bike name">
+                </td>
+            </tr>
+
+            <tr>
+                <td>MODEL</td>
+                <td>
+                    <select id="model">
+                        <option value="">Select model</option>
+                        <option>Street Triple 765 R</option>
+                        <option>Street Triple 765 RS</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>BOOKING DATE</td>
+                <td>
+                    <input type="date" id="date">
+                </td>
+            </tr>
+
+            <tr>
+                <td>NEAR BY SHOWROOM</td>
+                <td>
+                    <select id="showroom">
+                        <option value="">Select showroom</option>
+                        <option>Hyderabad</option>
+                        <option>Bangalore</option>
+                        <option>Chennai</option>
+                        <option>Mumbai</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>DRIVING LICENSE</td>
+                <td>
+                    <input type="file" id="license"
+                           accept="image/*">
+                </td>
+            </tr>
+
+            <tr>
+                <td>CONTACT</td>
+                <td>
+                    <input type="tel" id="contact"
+                           placeholder="Enter contact number">
+                </td>
+            </tr>
+
+            <tr>
+                <td>ENGINE TYPE / CC</td>
+                <td>
+                    <select id="engine">
+                        <option value="">Select engine</option>
+                        <option>765 CC</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <button type="submit">BOOK BIKE</button>
+                </td>
+            </tr>
+
+        </table>
+
+    </form>
+
+    <script>
+        document.getElementById("bookingForm").addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            let bike = document.getElementById("bikeName").value;
+            let model = document.getElementById("model").value;
+            let date = document.getElementById("date").value;
+            let showroom = document.getElementById("showroom").value;
+            let license = document.getElementById("license").value;
+            let contact = document.getElementById("contact").value;
+            let engine = document.getElementById("engine").value;
+
+            if (
+                bike === "" ||
+                model === "" ||
+                date === "" ||
+                showroom === "" ||
+                license === "" ||
+                contact === "" ||
+                engine === ""
+            ) {
+                alert("Please enter your details");
+            } else {
+                alert("Your booking is successful!");
+            }
+
+        });
+    </script>
+
+</body>
+</html>

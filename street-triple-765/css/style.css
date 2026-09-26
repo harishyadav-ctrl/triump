@@ -1,0 +1,594 @@
+/* Remove default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page */
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Navigation */
+header {
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    padding: 25px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #e10600;
+}
+
+
+/* Hero */
+.hero {
+    min-height: 75vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 75vh;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    background: 
+    (circle at center,#2a0000 0% #111 45%, #050505 100%);
+}
+
+.hero-bike {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 0;
+   
+}
+
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.hero-small-text {
+    font-size: 16px;
+    letter-spacing: 8px;
+    color: #aaa;
+}
+
+.hero h1 {
+    font-size: 70px;
+    line-height: 1;
+    letter-spacing: 3px;
+    margin: 20px 0;
+}
+
+.hero h1 span {
+    display: block;
+    color: #e10600;
+}
+
+
+.hero h1::after {
+    content: "";
+
+    display: block;
+
+    width: 100px;
+    height: 4px;
+
+    background-color: #e10600;
+
+    margin: 25px auto 0;
+}
+
+.hero-description {
+    margin: 30px 0;
+    font-size: 20px;
+    color: #ccc;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 16px 35px;
+    background-color: #e10600;
+    color: white;
+    text-decoration: none;
+    font-weight: blod;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+.hero-button:hover {
+    background-color: white;
+    color: #e10600;
+
+    transform: scale(1.05);
+
+    box-shadow:
+        0 0 15px rgba(225, 6, 0, 0.6),
+        0 0 30px rgba(225, 6, 0, 0.3);
+}
+
+ .hero-content {
+    animation: heroAppear 1.2s ease-out;
+}
+
+@keyframes heroAppear {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero h1 span {
+    color: #e10600;
+    display: block;
+
+    text-shadow:
+        0 0 10px rgba(225, 6, 0, 0.5),
+        0 0 25px rgba(225, 6, 0, 0.3);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+/* =========================
+   ABOUT PAGE
+========================= */
+
+.about {
+    width: 90%;
+    max-width: 1200px;
+    min-height: 80vh;
+
+    margin: 50px auto;
+
+    text-align: center;
+}
+
+.about-heading p {
+    color: #aaa;
+
+    font-size: 15px;
+    letter-spacing: 6px;
+
+    margin-bottom: 20px;
+}
+
+.about-heading h1 {
+    font-size: 60px;
+    line-height: 1.1;
+}
+
+.about-heading h1 span {
+    display: block;
+    color: #e10600;
+
+    text-shadow:
+        0 0 10px rgba(225, 6, 0, 0.5);
+}
+
+
+/* Introduction */
+
+.about-intro {
+    max-width: 800px;
+
+    margin: 70px auto 50px;
+}
+
+.about-intro h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.about-intro p {
+    color: #bbb;
+
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* Cards */
+
+.about-cards {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-top: 50px;
+}
+
+.about-card {
+    background: #181818;
+
+    border: 1px solid #333;
+
+    padding: 35px;
+
+    text-align: left;
+
+    transition: 0.3s;
+}
+
+.about-card:hover {
+    transform: translateY(-10px);
+
+    border-color: #e10600;
+
+    box-shadow:
+        0 10px 30px rgba(225, 6, 0, 0.15);
+}
+
+.card-number {
+    color: #e10600;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    margin-bottom: 25px;
+}
+
+.about-card h2 {
+    font-size: 24px;
+
+    margin-bottom: 15px;
+}
+
+.about-card p {
+    color: #aaa;
+
+    line-height: 1.6;
+}
+
+/* =========================
+   SPECIFICATIONS PAGE
+========================= */
+
+.specifications {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 50px auto 80px;
+
+    text-align: center;
+}
+
+
+/* Heading */
+
+.spec-heading p {
+    color: #aaa;
+
+    font-size: 15px;
+    letter-spacing: 6px;
+
+    margin-bottom: 20px;
+}
+
+.spec-heading h1 {
+    font-size: 55px;
+
+    line-height: 1.1;
+
+    margin-bottom: 60px;
+}
+
+.spec-heading h1 span {
+    display: block;
+
+    color: #e10600;
+
+    text-shadow:
+        0 0 10px rgba(225, 6, 0, 0.5);
+}
+
+
+/* Specification Grid */
+
+.spec-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+/* Cards */
+
+.spec-card {
+    min-height: 180px;
+
+    padding: 30px 20px;
+
+    background: #181818;
+
+    border: 1px solid #333;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+    transition: 0.3s;
+}
+
+.spec-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #e10600;
+
+    box-shadow:
+        0 10px 30px rgba(225, 6, 0, 0.15);
+}
+
+
+/* Card Text */
+
+.spec-card span {
+    color: #999;
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+.spec-card h2 {
+    color: white;
+
+    font-size: 30px;
+
+    margin-bottom: 10px;
+}
+
+.spec-card p {
+    color: #aaa;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+/* =========================
+   GALLERY PAGE
+========================= */
+
+.gallery {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 50px auto 80px;
+}
+
+
+/* Heading */
+
+.gallery-heading {
+    text-align: center;
+
+    margin-bottom: 60px;
+}
+
+.gallery-heading p {
+    color: #aaa;
+
+    font-size: 15px;
+    letter-spacing: 6px;
+
+    margin-bottom: 20px;
+}
+
+.gallery-heading h1 {
+    font-size: 55px;
+
+    line-height: 1.1;
+}
+
+.gallery-heading h1 span {
+    display: block;
+
+    color: #e10600;
+
+    text-shadow:
+        0 0 10px rgba(225, 6, 0, 0.5);
+}
+
+
+/* Gallery Grid */
+
+.gallery-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+/* Gallery Cards */
+
+.gallery-item {
+    height: 300px;
+
+    overflow: hidden;
+
+    border: 1px solid #333;
+}
+
+.gallery-placeholder {
+    width: 100%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #222,
+            #111
+        );
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    transition: 0.4s;
+}
+
+.gallery-placeholder span {
+    color: #e10600;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+.gallery-placeholder h2 {
+    font-size: 25px;
+
+    letter-spacing: 2px;
+}
+
+
+/* Hover */
+
+.gallery-item:hover .gallery-placeholder {
+    transform: scale(1.08);
+
+    background:
+        radial-gradient(
+            circle,
+            #3a0000,
+            #111
+        );
+}
+
+.gallery-item:hover {
+    border-color: #e10600;
+}
+
+
+.gallery-item {
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #333;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.gallery-overlay {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    padding: 25px;
+
+    background: linear-gradient(
+        transparent,
+        rgba(0, 0, 0, 0.9)
+    );
+}
+
+.gallery-overlay span {
+    color: #e10600;
+    font-weight: bold;
+}
+
+.gallery-overlay h2 {
+    margin-top: 8px;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.details{
+  color: #e10600;
+}
